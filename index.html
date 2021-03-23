@@ -1,0 +1,33 @@
+<!DOCTYPE html lang="en">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./function.js"></script>
+    <!--google-fonts-->
+    <title>Password Generator</title>
+  </head>
+
+  <body>
+    <form id="passwordForm">
+      <div class="container">
+        <h3>Random Password Generator</h3>
+        <div class="resultsContainer">
+          <span id="result"></span>
+          <button id="copy">copy</button>
+        </div>
+        <!--Options-->
+        <div class="options">
+          <div class="option"></div>
+          <label>Length</label>
+          <input type="number" id="length" min="10" max="30" value="15" />
+          <div class="option">
+              <label>Uppercase letters:</label>
+              <input type="radio" id="uppercase" checked>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
