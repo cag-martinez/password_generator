@@ -42,8 +42,8 @@ h2{
     justify-content: space-between;
     padding: 0 5px;
     border: 1px whitesmoke;
-    background-color: black;
-    color: whitesmoke;
+    /* background-color: black;
+    color: whitesmoke; */
     align-items: center;
 }
 

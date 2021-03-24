@@ -20,16 +20,20 @@ const CHARACTER_CODES = lowToHighArray(33, 47)
   .concat(lowToHighArray(123, 126));
 
 // testing to make sure i am getting the requested characters
-// console.log(LOWERCASE_CODES);
-// console.log(UPPERCASE_CODES);
-// console.log(NUMBER_CODES);
-// console.log(CHARACTER_CODES);
+console.log(LOWERCASE_CODES);
+console.log(UPPERCASE_CODES);
+console.log(NUMBER_CODES);
+console.log(CHARACTER_CODES);
+
+// copyPassword.addEventListener("click", () => {
+//     const textarea = document.createElement('textarea');
+//     const 
+// })
 
 //event listener, checking the options selected and creating the password
-
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-  const characterLength = passwordLenght.nodeValue;
+  const characterLength = passwordLenght.value;
   const includeUppercase = uppercaseLetters.checked;
   const includeNumbers = numberCharacters.checked;
   const includeSymbols = specialCharacters.checked;
@@ -40,6 +44,7 @@ form.addEventListener('submit', (e) => {
     includeSymbols
   );
   resultPassword.innerText = password;
+  
 });
 
 //generating the password
@@ -50,16 +55,16 @@ let generatePassword = (
   includeNumbers,
   includeSymbols
 ) => {
-  let charCode = LOWERCASE_CODES;
-  if (includeUppercase) charCode = charCode.concat(UPPERCASE_CODES);
-  if (includeSymbols) charCode = charcode.concat(CHARACTER_CODES);
-  if (includeNumbers) charCode = charCode.concat(NUMBER_CODES);
+  let charCodes = LOWERCASE_CODES;
+  if (includeUppercase) charCodes = charCodes.concat(UPPERCASE_CODES);
+  if (includeSymbols) charCodes = charCodes.concat(CHARACTER_CODES);
+  if (includeNumbers) charCodes = charCodes.concat(NUMBER_CODES);
   const passwordChar = [];
   for (let i = 0; i < characterLength; i++) {
-    const charCode = charCode[Math.floor(Math.random() * charCode.length)];
-    passwordChar.push(String.fromCharCode(charCode));
+    const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)];
+    passwordChar.push(String.fromCharCode(characterCode));
   }
-  return passwordChar.join(" ");
+  return passwordChar.join("");
 };
 
 //for loop to increment until the highest value is achieved
@@ -69,4 +74,7 @@ function lowToHighArray(low, high) {
       array.push(i);
     }
     return array;
+    
   };
+
+  
