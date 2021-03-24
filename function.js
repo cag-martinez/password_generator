@@ -25,6 +25,7 @@ console.log(UPPERCASE_CODES);
 console.log(NUMBER_CODES);
 console.log(CHARACTER_CODES);
 
+// Copy to clipborad
 copyPassword.addEventListener("click", () => {
     const textarea = document.createElement('textarea');
     const copyPassword = resultPassword.innerText;
@@ -84,5 +85,3 @@ function lowToHighArray(low, high) {
     return array;
     
   };
-
-  
