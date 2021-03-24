@@ -15,3 +15,11 @@ let lowToHighArray = (low, high) => {
     }
     return array;
 }
+
+const LOWERCASE_CODES = lowToHighArray(97, 122);
+const UPPERCASE_CODES = lowToHighArray(65, 90);
+const NUMBER_CODES = lowToHighArray(48, 57);
+const CHARACTER_CODES = lowToHighArray (33, 47)
+    .concat(lowToHighArray(58, 64))
+    .concat(lowToHighArray(91, 96))
+    .concat(lowToHighArray(123, 126)) 
