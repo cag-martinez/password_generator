@@ -25,10 +25,18 @@ console.log(UPPERCASE_CODES);
 console.log(NUMBER_CODES);
 console.log(CHARACTER_CODES);
 
-// copyPassword.addEventListener("click", () => {
-//     const textarea = document.createElement('textarea');
-//     const 
-// })
+copyPassword.addEventListener("click", () => {
+    const textarea = document.createElement('textarea');
+    const copyPassword = resultPassword.innerText;
+    if (!copyPassword) return;
+    textarea.value = copyPassword;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove()
+    alert("copied to clipboard")
+
+})
 
 //event listener, checking the options selected and creating the password
 form.addEventListener('submit', (e) => {
