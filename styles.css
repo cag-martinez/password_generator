@@ -19,7 +19,7 @@ body {
 
 .container {
     padding: 5rem 6rem;
-    border: .5rem solid black;
+    border: .1rem solid black;
     width: 450px;
     background-color: rgba(157, 157, 157, 0.81);
 }
@@ -32,4 +32,22 @@ h2{
 .option{
     display: flex;
     justify-content: space-between;
+    padding: 4px;
+}
+
+.resultsContainer{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    border: 1px whitesmoke;
+    background-color: black;
+    color: whitesmoke;
+    align-items: center;
+}
+
+.resultsContainer #result{
+    word-wrap: none;
+    max-width: calc(100% - 40px);
 }
